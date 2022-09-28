@@ -56,23 +56,21 @@ const LoggedInView = (props) => {
   return null;
 };
 
-class Header extends React.Component {
-  render() {
-    return (
-      <nav
-        className="navbar navbar-expand-md navbar-dark"
-        style={{ padding: "0.5rem 2rem" }}
-      >
-        <Link to="/" className="navbar-brand">
-          <img alt="logo" src={logo} />
-        </Link>
+function Header(props) {
+  return (
+    <nav
+      className="navbar navbar-expand-md navbar-dark"
+      style={{ padding: "0.5rem 2rem" }}
+    >
+      <Link to="/" className="navbar-brand">
+        <img alt="logo" src={logo} />
+      </Link>
 
-        <LoggedOutView currentUser={this.props.currentUser} />
+      <LoggedOutView currentUser={props.currentUser} />
 
-        <LoggedInView currentUser={this.props.currentUser} />
-      </nav>
-    );
-  }
+      <LoggedInView currentUser={props.currentUser} />
+    </nav>
+  );
 }
 
 export default Header;
