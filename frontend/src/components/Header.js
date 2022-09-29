@@ -71,6 +71,6 @@ const Header = (props) => {
       <LoggedInView currentUser={props.currentUser} />
     </nav>
   );
-}
+};
 
 export default Header;
