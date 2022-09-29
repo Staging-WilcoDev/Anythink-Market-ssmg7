@@ -64,4 +64,4 @@ const CommentInput = (props) => {
   );
 };
 
-export default connect(() => ({}), mapDispatchToProps)(CommentInput);
+export default CommentInput;
